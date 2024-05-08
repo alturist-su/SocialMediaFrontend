@@ -5,10 +5,10 @@ import { menu } from './SidebarConfig';
 const Sidebar = () => {
   return (
     <div className='sticky top-0 h-[100vh]'>
-        <div className='flex flex-col justify-between h-full'>
+        <div className='flex flex-col justify-between h-full px-10'>
             <div>
             <div>
-                <img className='w-40' src="https://assets.turbologo.com/blog/en/2019/09/19084953/instagram-logo-illustration-958x575.png" alt='' />
+                <img className='w-40' src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" alt='' />
             </div>
             <div className='mt-10'>
                 {menu.map((item)=>
@@ -19,7 +19,7 @@ const Sidebar = () => {
                 )}
             </div>
             </div> 
-            <div className='flex items-center cursor-pointer'>
+            <div className='flex items-center cursor-pointer pb-10 text-2xl'>
             <IoReorderThree />
             <p className='ml-5'>More</p>
         </div> 

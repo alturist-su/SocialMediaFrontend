@@ -6,11 +6,11 @@ import HomePage from '../HomePage/HomePage'
 const Router = () => {
   return (
     <div>
-        <div>
-            <div className='flex'>
+        <div className='flex'>
+            <div className='width-[20%] border border-l-slate-500'>
                 <Sidebar/>
             </div>
-            <div className='flex'>
+            <div>
                 <Routes>
                     <Route path="/" element={<HomePage/>}></Route>
                 </Routes>
