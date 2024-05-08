@@ -10,7 +10,7 @@ const Router = () => {
             <div className='flex'>
                 <Sidebar/>
             </div>
-            <div>
+            <div className='flex'>
                 <Routes>
                     <Route path="/" element={<HomePage/>}></Route>
                 </Routes>

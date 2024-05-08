@@ -2,29 +2,29 @@ import { AiOutlineHome, AiFillHome, AiOutlineSearch, AiOutlineCompass, AiFillCom
 import { CgProfile } from "react-icons/cg"
 import { RiVideoFill, RiVideoLine } from "react-icons/ri"
 
-const menu = [
+export const menu = [
     {
-        title:"Home", icon: <AiOutlineHome></AiOutlineHome>, activeIcon: <AiFillHome></AiFillHome>
+        title:"Home", icon: <AiOutlineHome className="text-2xl mr-5"></AiOutlineHome>, activeIcon: <AiFillHome className="text-2xl mr-5"></AiFillHome>
     },
     {
-        title:"Search", icon: <AiOutlineSearch></AiOutlineSearch>, activeIcon: <AiOutlineSearch></AiOutlineSearch>
+        title:"Search", icon: <AiOutlineSearch className="text-2xl mr-5"></AiOutlineSearch>, activeIcon: <AiOutlineSearch className="text-2xl mr-5"></AiOutlineSearch>
+    },
+    { 
+        title:"Explore", icon: <AiOutlineCompass className="text-2xl mr-5"></AiOutlineCompass>, activeIcon: <AiFillCompass className="text-2xl mr-5"></AiFillCompass>
     },
     {
-        title:"Explore", icon: <AiOutlineCompass></AiOutlineCompass>, activeIcon: <AiFillCompass></AiFillCompass>
+        title:"Reels", icon: <RiVideoLine className="text-2xl mr-5"></RiVideoLine>, activeIcon: <RiVideoFill className="text-2xl mr-5"></RiVideoFill>
     },
     {
-        title:"Reels", icon: <RiVideoLine></RiVideoLine>, activeIcon: <RiVideoFill></RiVideoFill>
+        title:"Message", icon: <AiOutlineMessage className="text-2xl mr-5"></AiOutlineMessage>, activeIcon: <AiFillMessage className="text-2xl mr-5"></AiFillMessage>
     },
     {
-        title:"Message", icon: <AiOutlineMessage></AiOutlineMessage>, activeIcon: <AiFillMessage></AiFillMessage>
+        title:"Notification", icon: <AiOutlineNotification className="text-2xl mr-5"></AiOutlineNotification>, activeIcon: <AiFillNotification className="text-2xl mr-5"></AiFillNotification>
     },
     {
-        title:"Notification", icon: <AiOutlineNotification></AiOutlineNotification>, activeIcon: <AiFillNotification></AiFillNotification>
+        title:"Create", icon: <AiOutlinePlusCircle className="text-2xl mr-5"></AiOutlinePlusCircle>, activeIcon: <AiFillPlusCircle className="text-2xl mr-5"></AiFillPlusCircle>
     },
     {
-        title:"Create", icon: <AiOutlinePlusCircle></AiOutlinePlusCircle>, activeIcon: <AiFillPlusCircle></AiFillPlusCircle>
-    },
-    {
-        title:"Profile", icon: <CgProfile></CgProfile>, activeIcon: <CgProfile></CgProfile>
+        title:"Profile", icon: <CgProfile className="text-2xl mr-5"></CgProfile>, activeIcon: <CgProfile className="text-2xl mr-5"></CgProfile>
     }
 ]
