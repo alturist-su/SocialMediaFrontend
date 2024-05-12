@@ -29,7 +29,7 @@ const Sidebar = () => {
                 {menu.map((item)=>
                     <div onClick={() => handleTabClick(item.title)} className='flex items-center mb-5 cursor-pointer text-lg'> 
                     {activeTab === item.title ? item.activeIcon : item.icon}
-                    <p>{item.title}</p>
+                    <p className= {`${activeTab===item.title?"font-bold":"font-semibold"}`}>{item.title}</p>
                 </div> 
                 )}
             </div>
