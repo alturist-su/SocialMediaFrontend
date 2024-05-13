@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { AiOutlineTable, AiOutlineUser } from 'react-icons/ai'
 import { BiBookmark } from 'react-icons/bi'
 import { RiVideoAddLine } from 'react-icons/ri'
+import ReqUserPostCard from './ReqUserPostCard'
 
 const ReqUserPostPart = () => {
   const [activeTab, setActiveTab] = useState()
@@ -34,6 +35,11 @@ const ReqUserPostPart = () => {
                     <p className='ml-1'>{item.tab}</p>
                 </div>
             )}
+        </div>
+        <div>
+            <div className='flex flex-wrap'>
+                {[1,1,1,1,1,1].map((item)=><ReqUserPostCard/>)}
+            </div>
         </div>
     </div>
   )
