@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 import { BsThreeDots } from 'react-icons/bs'
 import "./PostCard.css"
 import { AiFillAlert, AiOutlineHeart } from 'react-icons/ai';
+import { FaRegComment } from 'react-icons/fa';
 
 const PostCard = () => {
   const [showDropDown, setshowDropDown] = useState(false);
   const [isPostLiked, setIsPostLiked] = useState(false);
+ 
+  const handlePostLike=()=>{
+    setIsPostLiked(!isPostLiked)
+  }
+
   const handleClick=()=>{
      setshowDropDown(!showDropDown); 
   }
@@ -32,8 +38,8 @@ const PostCard = () => {
                 <img className='w-full' src='https://cdn.pixabay.com/photo/2017/09/15/02/22/fantasy-2750995_1280.jpg' alt=''/>
             </div>
             <div>
-                <AiFillAlert/>
-                <AiOutlineHeart/> 
+                {isPostLiked? <AiFillAlert className='text-xl hover:opacity-50 cursor-pointer ' onClick={handlePostLike}/> :<AiOutlineHeart onClick={handlePostLike}/> }
+                <FaRegComment className='text-xl hover:opacity-50 cursor-pointer '/>                
             </div>
         </div>
     </div>
