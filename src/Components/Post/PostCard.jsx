@@ -38,7 +38,7 @@ const PostCard = () => {
                 <img className='w-full' src='https://cdn.pixabay.com/photo/2017/09/15/02/22/fantasy-2750995_1280.jpg' alt=''/>
             </div>
             <div>
-                {isPostLiked? <AiFillAlert className='text-xl hover:opacity-50 cursor-pointer ' onClick={handlePostLike}/> :<AiOutlineHeart onClick={handlePostLike}/> }
+                {isPostLiked? <AiFillAlert className='text-xl hover:opacity-50 cursor-pointer' onClick={handlePostLike}/> :<AiOutlineHeart onClick={handlePostLike}/> }
                 <FaRegComment className='text-xl hover:opacity-50 cursor-pointer '/>                
             </div>
         </div>
