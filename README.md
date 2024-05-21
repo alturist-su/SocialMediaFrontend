@@ -68,8 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
 # SocialMediaFrontend
 ## TECHNOLOGIES:
 ### REACT
@@ -77,4 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### FORMIK
 ### TAILWIND CSS
 ### CHAKRAUI
->>>>>>> 77fdee6f79fb721f5a734378fb245f7c91e1b613
+
