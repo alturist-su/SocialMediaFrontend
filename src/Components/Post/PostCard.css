@@ -28,3 +28,45 @@
     width: 100%;
     padding: .5rem .7rem;
 }
+
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-card .post-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.post-card .post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-card .post-comments {
+  margin-top: 10px;
+}
+
+.post-card .post-add-comment {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.post-card .post-add-comment input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.post-card .post-add-comment button {
+  margin-left: 10px;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}

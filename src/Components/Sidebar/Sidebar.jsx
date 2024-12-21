@@ -23,7 +23,7 @@ const Sidebar = () => {
         <div className='flex flex-col justify-between h-full px-10'>
             <div>
             <div>
-                <img className='w-40' src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" alt='' />
+                <img className='w-40' src="https://images.squarespace-cdn.com/content/v1/5525c57de4b0aad8338e3435/1519409215530-NM8CN75S2G404F0EE13E/download.png?format=2500w" alt='' />
             </div>
             <div className='mt-10'>
                 {menu.map((item)=>

@@ -7,6 +7,7 @@ const Profile = () => {
   return (
     <div className='px-20'>
         <div>
+        <h1>Profile Page</h1>
             <ProfileUserDetails/>
         </div>
         <div>
