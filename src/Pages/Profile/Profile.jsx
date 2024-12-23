@@ -6,9 +6,9 @@ import ReqUserPostPart from '../../Components/ProfileComponents/ReqUserPostPart'
 const Profile = () => {
   return (
     <div className='px-20'>
-        <div>
+        <div className=''>
         <h1>Profile Page</h1>
-            <ProfileUserDetails/>
+            <ProfileUserDetails />
         </div>
         <div>
             <ReqUserPostPart/>

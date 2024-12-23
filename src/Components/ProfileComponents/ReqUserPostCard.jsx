@@ -1,13 +1,12 @@
 import React from 'react'
 import { AiFillHeart } from 'react-icons/ai'
 import { FaComment } from 'react-icons/fa'
-import "./ReqUserPostCard.css"
 
 const ReqUserPostCard = () => {
   return (
-    <div className='p-2'>
+    <div className='flex justify-center items-center'>
         <div className='post w-60 h-60'>
-            <img className='cursor-pointer' src='https://cdn.pixabay.com/photo/2018/01/21/14/16/woman-3096664_1280.jpg' alt=''/>
+            <img className='cursor-pointer' src='https://cdn.pixabay.com/photo/2017/10/07/22/24/post-letter-2828146_1280.jpg' alt=''/>
             <div className='overlay'>
                 <div className='overlay-text flex justify-between'>
                     <div>

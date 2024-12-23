@@ -13,7 +13,7 @@ const Router = () => {
         </div>
         <div className='w-full'>
           <Routes>
-            <Route path="/" element={<Navigate to="/username" />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/username" element={<Profile />} />
           </Routes>
         </div>
