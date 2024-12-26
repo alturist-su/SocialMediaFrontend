@@ -7,7 +7,7 @@ const ProfileUserDetails = () => {
       <div className="flex items-center space-x-10">
         <div className="flex items-center">
           <img 
-            className="w-50 h-32 rounded-full"
+            className="w-40 h-32 rounded-full"
             src="https://cdn.pixabay.com/photo/2019/08/21/09/29/lamp-post-4420668_1280.jpg" 
             alt="" />
         </div>

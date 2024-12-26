@@ -4,6 +4,7 @@ import { AiFillAlert, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { FaRegComment } from 'react-icons/fa';
 import { RiSendPlaneLine } from 'react-icons/ri';
 import CommentModal from '../Comment/CommentModal';
+import { useDisclosure } from '@chakra-ui/react';
 import './PostCard.css';
 
 const PostCard = () => {
@@ -12,6 +13,7 @@ const PostCard = () => {
   const [isPostSaved, setIsPostSaved] = useState(false);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handlePostSaved = () => {
     setIsPostSaved(!isPostSaved);
@@ -25,6 +27,10 @@ const PostCard = () => {
     setShowDropDown(!showDropDown);
   };
 
+  const handleOpenCommentModal = () => {
+    onOpen();
+  }
+
   return (
     <div>
       <div className='border rounded-md w-full'>
@@ -32,7 +38,7 @@ const PostCard = () => {
           <div className='flex items-center'>
             <img 
               className="h-12 w-12 rounded-full"
-              src="https://cdn.pixabay.com/photo/2023/01/15/17/58/nature-7720825_1280.jpg" 
+              src="https://cdn.pixabay.com/photo/2020/01/21/13/23/freedom-4782870_1280.jpg" 
               alt="" />
               <div className='pl-2'>
                 <p className='font-semibold text-sm'>username</p>
@@ -49,14 +55,14 @@ const PostCard = () => {
         <div className='w-full'>
           <img 
             className="w-full"
-            src="https://cdn.pixabay.com/photo/2023/10/24/21/15/nature-8339115_1280.jpg" 
+            src="https://cdn.pixabay.com/photo/2020/01/23/16/42/merry-christmas-4788167_1280.jpg" 
             alt="" />
         </div>
 
         <div className='flex justify-between items-center w-full py-4 px-5'>
           <div className='flex items-center space-x-2'>
             {isPostLiked ? <AiFillHeart onClick={handlePostLike} className='text-2xl hover:opacity-50 cursor-pointer text-red-500'/> : <AiOutlineHeart onClick={handlePostLike} className='text-2xl hover:opacity-50 cursor-pointer'/>}
-            <FaRegComment className='text-xl hover:opacity-50 cursor-pointer' />
+            <FaRegComment onClick={handleOpenCommentModal} className='text-xl hover:opacity-50 cursor-pointer' />
             <RiSendPlaneLine className='text-xl hover:opacity-50 cursor-pointer' />
           </div>
           <div className='cursor-pointer'>
@@ -78,7 +84,7 @@ const PostCard = () => {
       </div>
 
       <div>
-        <CommentModal />
+        <CommentModal handlePostLike={handlePostLike} onClose={onClose} isOpen={isOpen} handlePostSaved={handlePostSaved} isPostLiked={isPostLiked} isPostSaved={isPostSaved}/>
       </div>
     </div>
   );
