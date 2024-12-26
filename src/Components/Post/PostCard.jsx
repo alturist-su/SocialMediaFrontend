@@ -25,30 +25,26 @@ const PostCard = () => {
     setShowDropDown(!showDropDown);
   };
 
-  const handleAddComment = () => {
-    if (newComment.trim()) {
-      setComments([...comments, newComment]);
-      setNewComment('');
-    }
-  };
-
   return (
     <div className="post-card border rounded-md w-full p-4">
       <div className="flex justify-between items-center w-full py-2">
         <div className="flex items-center">
           <img
             className="w-10 h-10 rounded-full"
-            src="https://via.placeholder.com/150"
+            src="https://cdn.pixabay.com/photo/2014/12/02/19/30/snowmen-554398_1280.jpg"
             alt="User"
           />
-          <p className="ml-2 font-semibold">Username</p>
+          <div className="ml-2">
+            <p className="font-semibold">Username</p>
+            <p className="text-sm text-gray-500">Location</p>
+          </div>
         </div>
         <BsThreeDots onClick={handleClick} className="cursor-pointer" />
       </div>
       <div className="post-content my-4">
         <img
           className="w-full rounded-md"
-          src="https://via.placeholder.com/500"
+          src="https://cdn.pixabay.com/photo/2022/11/29/09/01/winter-7624034_1280.jpg"
           alt="Post"
         />
       </div>
@@ -62,38 +58,16 @@ const PostCard = () => {
           <FaRegComment className="cursor-pointer" />
           <RiSendPlaneLine className="cursor-pointer" />
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center space-x-4">
           {isPostSaved ? (
             <BsBookmarkFill onClick={handlePostSaved} className="cursor-pointer" />
           ) : (
             <BsBookmark onClick={handlePostSaved} className="cursor-pointer" />
           )}
+          <BsEmojiSmile className="cursor-pointer" />
         </div>
       </div>
-      <div className="post-comments mt-4">
-        {comments.map((comment, index) => (
-          <div key={index} className="flex items-center space-x-2 mb-2">
-            <p className="font-semibold">Username</p>
-            <p>{comment}</p>
-          </div>
-        ))}
-      </div>
-      <div className="post-add-comment flex items-center mt-4">
-        <BsEmojiSmile className="mr-2" />
-        <input
-          type="text"
-          className="flex-1 border rounded-md p-2"
-          placeholder="Add a comment..."
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
-        />
-        <button
-          className="ml-2 text-blue-500 font-semibold"
-          onClick={handleAddComment}
-        >
-          Post
-        </button>
-      </div>
+      <CommentModal comments={comments} setComments={setComments} newComment={newComment} setNewComment={setNewComment} />
     </div>
   );
 };

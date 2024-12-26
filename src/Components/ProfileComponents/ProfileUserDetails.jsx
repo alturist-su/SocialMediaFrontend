@@ -5,9 +5,9 @@ const ProfileUserDetails = () => {
   return (
     <div className="py-10 w-full">
       <div className="flex items-center space-x-10">
-        <div className="w-[15%] h-[15%]">
+        <div className="flex items-center">
           <img 
-            className="w-32 h-32 rounded-full "
+            className="w-50 h-32 rounded-full"
             src="https://cdn.pixabay.com/photo/2019/08/21/09/29/lamp-post-4420668_1280.jpg" 
             alt="" />
         </div>
