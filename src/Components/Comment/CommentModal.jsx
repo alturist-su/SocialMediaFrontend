@@ -17,8 +17,11 @@ const CommentModal = ({onClose,isOpen}) => {
                 <div className='flex items-center'>
                   <div>
                     <img className='w-9 h-9 rounded-full' 
-                    src='https://cdn.pixabay.com/photo/2023/01/08/18/11/plants-7705865_1280.jpg'
+                    src='https://cdn.pixabay.com/photo/2023/01/08/18/11/plants-7705865_1280.jpg' alt=''
                     />
+                  </div>
+                  <div className='ml-2'>
+                    <p className='font-semibold'>username</p>
                   </div>
                 </div>
               </div>
