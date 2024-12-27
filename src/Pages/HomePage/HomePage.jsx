@@ -3,6 +3,7 @@ import StoryCircle from '../../Components/Story/StoryCircle';
 import HomeRight from '../../Components/HomeRight/HomeRight';
 import PostCard from '../../Components/Post/PostCard';
 import './HomePage.css'; // Optional: Add a CSS file for additional styling
+import CreatePostModal from '../../Components/Post/CreatePostModal';
 
 const HomePage = () => {
   return (
@@ -23,8 +24,9 @@ const HomePage = () => {
           <HomeRight />
         </div>
       </div>
+      <CreatePostModal/>
     </div>
-  );
+  ); 
 };
 
 export default HomePage;
