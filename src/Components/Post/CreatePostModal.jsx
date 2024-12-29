@@ -28,7 +28,7 @@ const CreatePostModal = ({onClose, isOpen}) => {
 
     const handleOnChange = (event) => {
         const file = event.target.files[0]
-        if(file&& file.type.startsWith('image/') || file.type.startsWith('video/')) {
+        if(file && (file.type.startsWith('image/') || file.type.startsWith('video/'))) {
             setFile(file)
         }
         else{
@@ -52,7 +52,7 @@ const CreatePostModal = ({onClose, isOpen}) => {
             <ModalBody>
                 <div>
                     <div className='w-[50%]'>
-                        <div 
+                        {!file && <div 
                             onDrop={handleDrop}
                             onDragOver={handleDragOver}
                             onDragLeave={handleDragLeave}
@@ -64,7 +64,8 @@ const CreatePostModal = ({onClose, isOpen}) => {
                             </div>
                             <label htmlFor='file-upload' className='custom-file-upload'> Select From Computer</label>   
                             <input className='fileInput' type='file' id='file-upload' accept='photo/*, video/*' onChange={handleOnChange}/>
-                        </div>
+                        </div>}
+                        {file && <img src={URL.createObjectURL(file)} alt=''/>}
                     </div>
                 </div>
             </ModalBody>
