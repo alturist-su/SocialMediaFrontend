@@ -6,6 +6,7 @@ import './HomePage.css'; // Optional: Add a CSS file for additional styling
 import CreatePostModal from '../../Components/Post/CreatePostModal';
 
 const HomePage = () => {
+
   return (
     <div>
       <div className="mt-10 flex w-[100%] justify-center">
@@ -24,7 +25,6 @@ const HomePage = () => {
           <HomeRight />
         </div>
       </div>
-      <CreatePostModal/>
     </div>
   ); 
 };

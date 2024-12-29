@@ -35,3 +35,17 @@ input[type="file"]{
 .fileInput{
     display: none;
 }
+
+.captionInput{
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+    resize: none;
+    font-size: small;
+}
+
+.locationInput{
+    outline: none;
+    border: none;
+    width: 90%;
+}
